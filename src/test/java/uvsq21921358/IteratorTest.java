@@ -36,7 +36,6 @@ private PersonnelGroupe racine;
 	}
 	
 	@Test()
-
 	public void testPersonnelParGroupe() {
 
 		Personnel pg = new PersonnelImuable.Builder("TAHOURA","JEAN").dateNaiss(1997,02,8).numT(new NumTelephone("70010203","34567890","2345676788")).build();
@@ -44,7 +43,44 @@ private PersonnelGroupe racine;
 		IteratorPersonnel pti = new ParGroupeIterator(racine);
 		assertEquals(pti.next(), pg);
 	}
-
 	
+
+	@Test()
+	public void testGetRacineParHierarchie() {
+		IteratorPersonnel pti = racine.parHierarchieIterator();
+		assertEquals(pti.getRacine(), racine);
+	}
+	
+	@Test()
+	public void testIsEmptyParHierarchie() {
+		IteratorPersonnel pti = new ParHierarchieIterator(racine);
+		assertFalse(pti.hasNext());
+	}
+	
+	@Test()
+
+	public void testPersonnelGroupeParHierarchie() {
+		PersonnelGroupe pg = new PersonnelGroupe();
+		racine.addPersonnel(pg);
+		IteratorPersonnel pti = new ParHierarchieIterator(racine);
+		assertEquals(pti.next(), pg);
+	}
+	
+	@Test()
+
+	public void testPersonnelParHierarchie() {
+		Personnel pg = new PersonnelImuable.Builder("TAHOURA","JEAN").dateNaiss(1997,02,8).numT(new NumTelephone("70010203","34567890","2345676788")).build();
+		racine.addPersonnel(pg);
+		IteratorPersonnel pti = new ParHierarchieIterator(racine);
+		assertEquals(pti.next(), pg);
+	}
+	
+	@Test()
+	public void testPersonnelList() {
+		PersonnelGroupe pg = new PersonnelGroupe();
+		racine.addPersonnel(pg);
+		racine.removePersonnel(pg);
+		assertFalse(pg.parGroupeIterator().hasNext());
+	}
 }
 
