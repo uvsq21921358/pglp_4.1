@@ -45,7 +45,7 @@ public class PersonnelImuable implements Personnel{
 		}
 	}
 	
-	private PersonnelImuable(Builder build) {
+	PersonnelImuable(Builder build) {
 		
 		nom=build.nom;
 		prenom=build.prenom;

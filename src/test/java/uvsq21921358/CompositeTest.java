@@ -30,6 +30,10 @@ public class CompositeTest {
 		personn1.print();
 		personn2.print();
 		
+		personne.print();
+		
+	
+		
 	}
 		
 }
