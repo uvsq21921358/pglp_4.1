@@ -4,7 +4,7 @@ package uvsq21921358;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class PersonnelImuable {
+public class PersonnelImuable implements Personnel{
 
 	private final String nom;
 	private final String prenom;
@@ -58,5 +58,10 @@ public class PersonnelImuable {
 	public static void main (String arg[]) {
 		
 		PersonnelImuable personne= new PersonnelImuable.Builder("TAHOURA","JEAN").dateNaiss(1997,02,8).numT(new NumTelephone("70010203","34567890","2345676788")).build();
+	}
+
+	public void print() {
+		// TODO Auto-generated method stub
+		
 	}
 }
