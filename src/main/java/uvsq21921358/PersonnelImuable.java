@@ -64,4 +64,9 @@ public class PersonnelImuable implements Personnel{
 		// TODO Auto-generated method stub
 		
 	}
+
+	public boolean isGroupe() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

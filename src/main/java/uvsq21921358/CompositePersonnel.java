@@ -27,5 +27,9 @@ public class CompositePersonnel implements Personnel{
 	public void remove (PersonnelImuable person) {
 		this.pers.remove(person);
 	}
+	public boolean isGroupe() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }

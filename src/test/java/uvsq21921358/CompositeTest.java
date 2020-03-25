@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 public class CompositeTest {
 
-	PersonnelImuable p1= new PersonnelImuable();
-	PersonnelImuable p2= new PersonnelImuable();
-	PersonnelImuable p3= new PersonnelImuable();
-	PersonnelImuable p4= new PersonnelImuable();
+	PersonnelImuable p1= new PersonnelImuable(null);
+	PersonnelImuable p2= new PersonnelImuable(null);
+	PersonnelImuable p3= new PersonnelImuable(null);
+	PersonnelImuable p4= new PersonnelImuable(null);
 		
 	@Test
 	public void test() {
